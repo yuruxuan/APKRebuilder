@@ -1,0 +1,389 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E5B5161D23E65D8F004D9F33 /* apksigner.jar in Resources */ = {isa = PBXBuildFile; fileRef = E5B5161B23E65D76004D9F33 /* apksigner.jar */; };
+		E5B5161F23E6713F004D9F33 /* APKRebuilder.keystore in Resources */ = {isa = PBXBuildFile; fileRef = E5B5161E23E67133004D9F33 /* APKRebuilder.keystore */; };
+		E5B5162123E67B5F004D9F33 /* jd-gui-1.6.6.jar in Resources */ = {isa = PBXBuildFile; fileRef = E5B5162023E67B53004D9F33 /* jd-gui-1.6.6.jar */; };
+		E5B5170B23E6B5EB004D9F33 /* baksmali-2.3.4.jar in Resources */ = {isa = PBXBuildFile; fileRef = E5B5170723E6B5E1004D9F33 /* baksmali-2.3.4.jar */; };
+		E5B5170C23E6B5EB004D9F33 /* smali-2.3.4.jar in Resources */ = {isa = PBXBuildFile; fileRef = E5B5170823E6B5E1004D9F33 /* smali-2.3.4.jar */; };
+		E5B5170E23E6C18E004D9F33 /* dex2jar in Resources */ = {isa = PBXBuildFile; fileRef = E5B5170D23E6C18E004D9F33 /* dex2jar */; };
+		E5C73E2A23E50B3E00B24A0A /* ProcessCallback.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C73E2923E50B3E00B24A0A /* ProcessCallback.swift */; };
+		E5C73E2C23E50F1200B24A0A /* ProcessShell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C73E2B23E50F1200B24A0A /* ProcessShell.swift */; };
+		E5C73E3523E55D5600B24A0A /* apktool_2.4.1.jar in Resources */ = {isa = PBXBuildFile; fileRef = E5C73E3323E55C5000B24A0A /* apktool_2.4.1.jar */; };
+		E5C73E3723E5698900B24A0A /* APKHanderCallback.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C73E3623E5698900B24A0A /* APKHanderCallback.swift */; };
+		E5CCAD9423E41549007661AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5CCAD9323E41549007661AB /* AppDelegate.swift */; };
+		E5CCAD9623E4154A007661AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5CCAD9523E4154A007661AB /* Assets.xcassets */; };
+		E5CCAD9923E4154A007661AB /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = E5CCAD9723E4154A007661AB /* MainMenu.xib */; };
+		E5CCADA323E4160F007661AB /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5CCADA123E4160F007661AB /* MainViewController.swift */; };
+		E5CCADA423E4160F007661AB /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E5CCADA223E4160F007661AB /* MainViewController.xib */; };
+		E5CCADA623E459B8007661AB /* APKHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5CCADA523E459B8007661AB /* APKHandler.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		E5B5161B23E65D76004D9F33 /* apksigner.jar */ = {isa = PBXFileReference; lastKnownFileType = archive.jar; path = apksigner.jar; sourceTree = "<group>"; };
+		E5B5161E23E67133004D9F33 /* APKRebuilder.keystore */ = {isa = PBXFileReference; lastKnownFileType = file; path = APKRebuilder.keystore; sourceTree = "<group>"; };
+		E5B5162023E67B53004D9F33 /* jd-gui-1.6.6.jar */ = {isa = PBXFileReference; lastKnownFileType = archive.jar; path = "jd-gui-1.6.6.jar"; sourceTree = "<group>"; };
+		E5B5170723E6B5E1004D9F33 /* baksmali-2.3.4.jar */ = {isa = PBXFileReference; lastKnownFileType = archive.jar; path = "baksmali-2.3.4.jar"; sourceTree = "<group>"; };
+		E5B5170823E6B5E1004D9F33 /* smali-2.3.4.jar */ = {isa = PBXFileReference; lastKnownFileType = archive.jar; path = "smali-2.3.4.jar"; sourceTree = "<group>"; };
+		E5B5170D23E6C18E004D9F33 /* dex2jar */ = {isa = PBXFileReference; lastKnownFileType = folder; path = dex2jar; sourceTree = "<group>"; };
+		E5C73E2923E50B3E00B24A0A /* ProcessCallback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessCallback.swift; sourceTree = "<group>"; };
+		E5C73E2B23E50F1200B24A0A /* ProcessShell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessShell.swift; sourceTree = "<group>"; };
+		E5C73E3323E55C5000B24A0A /* apktool_2.4.1.jar */ = {isa = PBXFileReference; lastKnownFileType = archive.jar; path = apktool_2.4.1.jar; sourceTree = "<group>"; };
+		E5C73E3623E5698900B24A0A /* APKHanderCallback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APKHanderCallback.swift; sourceTree = "<group>"; };
+		E5CCAD9023E41549007661AB /* APKRebuilder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = APKRebuilder.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5CCAD9323E41549007661AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E5CCAD9523E4154A007661AB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E5CCAD9823E4154A007661AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		E5CCAD9A23E4154A007661AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E5CCAD9B23E4154A007661AB /* APKRebuilder.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = APKRebuilder.entitlements; sourceTree = "<group>"; };
+		E5CCADA123E4160F007661AB /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		E5CCADA223E4160F007661AB /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		E5CCADA523E459B8007661AB /* APKHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APKHandler.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E5CCAD8D23E41549007661AB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E5C73E2D23E5592900B24A0A /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				E5B5170D23E6C18E004D9F33 /* dex2jar */,
+				E5B5161E23E67133004D9F33 /* APKRebuilder.keystore */,
+				E5B5161B23E65D76004D9F33 /* apksigner.jar */,
+				E5C73E3323E55C5000B24A0A /* apktool_2.4.1.jar */,
+				E5B5162023E67B53004D9F33 /* jd-gui-1.6.6.jar */,
+				E5B5170723E6B5E1004D9F33 /* baksmali-2.3.4.jar */,
+				E5B5170823E6B5E1004D9F33 /* smali-2.3.4.jar */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		E5CCAD8723E41549007661AB = {
+			isa = PBXGroup;
+			children = (
+				E5CCAD9223E41549007661AB /* APKRebuilder */,
+				E5CCAD9123E41549007661AB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E5CCAD9123E41549007661AB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E5CCAD9023E41549007661AB /* APKRebuilder.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E5CCAD9223E41549007661AB /* APKRebuilder */ = {
+			isa = PBXGroup;
+			children = (
+				E5C73E2D23E5592900B24A0A /* Tools */,
+				E5CCAD9323E41549007661AB /* AppDelegate.swift */,
+				E5CCAD9523E4154A007661AB /* Assets.xcassets */,
+				E5CCAD9723E4154A007661AB /* MainMenu.xib */,
+				E5CCAD9A23E4154A007661AB /* Info.plist */,
+				E5CCAD9B23E4154A007661AB /* APKRebuilder.entitlements */,
+				E5CCADA123E4160F007661AB /* MainViewController.swift */,
+				E5CCADA223E4160F007661AB /* MainViewController.xib */,
+				E5CCADA523E459B8007661AB /* APKHandler.swift */,
+				E5C73E3623E5698900B24A0A /* APKHanderCallback.swift */,
+				E5C73E2B23E50F1200B24A0A /* ProcessShell.swift */,
+				E5C73E2923E50B3E00B24A0A /* ProcessCallback.swift */,
+			);
+			path = APKRebuilder;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E5CCAD8F23E41549007661AB /* APKRebuilder */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E5CCAD9E23E4154A007661AB /* Build configuration list for PBXNativeTarget "APKRebuilder" */;
+			buildPhases = (
+				E5CCAD8C23E41549007661AB /* Sources */,
+				E5CCAD8D23E41549007661AB /* Frameworks */,
+				E5CCAD8E23E41549007661AB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = APKRebuilder;
+			productName = APKRebuilder;
+			productReference = E5CCAD9023E41549007661AB /* APKRebuilder.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E5CCAD8823E41549007661AB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = Yu;
+				TargetAttributes = {
+					E5CCAD8F23E41549007661AB = {
+						CreatedOnToolsVersion = 10.2.1;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 0;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = E5CCAD8B23E41549007661AB /* Build configuration list for PBXProject "APKRebuilder" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E5CCAD8723E41549007661AB;
+			productRefGroup = E5CCAD9123E41549007661AB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E5CCAD8F23E41549007661AB /* APKRebuilder */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E5CCAD8E23E41549007661AB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E5B5170B23E6B5EB004D9F33 /* baksmali-2.3.4.jar in Resources */,
+				E5B5170E23E6C18E004D9F33 /* dex2jar in Resources */,
+				E5B5170C23E6B5EB004D9F33 /* smali-2.3.4.jar in Resources */,
+				E5B5161F23E6713F004D9F33 /* APKRebuilder.keystore in Resources */,
+				E5B5161D23E65D8F004D9F33 /* apksigner.jar in Resources */,
+				E5C73E3523E55D5600B24A0A /* apktool_2.4.1.jar in Resources */,
+				E5B5162123E67B5F004D9F33 /* jd-gui-1.6.6.jar in Resources */,
+				E5CCAD9623E4154A007661AB /* Assets.xcassets in Resources */,
+				E5CCADA423E4160F007661AB /* MainViewController.xib in Resources */,
+				E5CCAD9923E4154A007661AB /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E5CCAD8C23E41549007661AB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E5C73E2C23E50F1200B24A0A /* ProcessShell.swift in Sources */,
+				E5C73E3723E5698900B24A0A /* APKHanderCallback.swift in Sources */,
+				E5C73E2A23E50B3E00B24A0A /* ProcessCallback.swift in Sources */,
+				E5CCAD9423E41549007661AB /* AppDelegate.swift in Sources */,
+				E5CCADA323E4160F007661AB /* MainViewController.swift in Sources */,
+				E5CCADA623E459B8007661AB /* APKHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		E5CCAD9723E4154A007661AB /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E5CCAD9823E4154A007661AB /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E5CCAD9C23E4154A007661AB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		E5CCAD9D23E4154A007661AB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		E5CCAD9F23E4154A007661AB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = APKRebuilder/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = coding.yu.APKRebuilder;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		E5CCADA023E4154A007661AB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = APKRebuilder/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = coding.yu.APKRebuilder;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E5CCAD8B23E41549007661AB /* Build configuration list for PBXProject "APKRebuilder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E5CCAD9C23E4154A007661AB /* Debug */,
+				E5CCAD9D23E4154A007661AB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E5CCAD9E23E4154A007661AB /* Build configuration list for PBXNativeTarget "APKRebuilder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E5CCAD9F23E4154A007661AB /* Debug */,
+				E5CCADA023E4154A007661AB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E5CCAD8823E41549007661AB /* Project object */;
+}
