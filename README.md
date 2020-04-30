@@ -37,9 +37,6 @@ APKRebuilder是Mac平台的APK反编译工具集，目前使用 Xcode10.2.1 + Sw
 3.以后会频繁维护么？  
 >Maybe
 
-## TODO
-单独的签名功能还没做，按钮我置灰了
-
 ## 参考和引用库
 [apktool](https://ibotpeaches.github.io/Apktool/)  
 [apksigner](https://developer.android.google.cn/studio/command-line/apksigner)  

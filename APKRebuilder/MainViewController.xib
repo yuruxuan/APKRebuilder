@@ -236,15 +236,15 @@
                     <rect key="frame" x="20" y="20" width="760" height="242"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <clipView key="contentView" ambiguous="YES" drawsBackground="NO" copiesOnScroll="NO" id="Gn6-6T-LNT">
-                        <rect key="frame" x="1" y="1" width="743" height="240"/>
+                        <rect key="frame" x="1" y="1" width="758" height="240"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView ambiguous="YES" editable="NO" importsGraphics="NO" richText="NO" verticallyResizable="YES" smartInsertDelete="YES" id="FSS-cf-H5g">
-                                <rect key="frame" x="0.0" y="0.0" width="743" height="240"/>
+                                <rect key="frame" x="0.0" y="0.0" width="758" height="240"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <size key="minSize" width="743" height="240"/>
+                                <size key="minSize" width="758" height="240"/>
                                 <size key="maxSize" width="760" height="10000000"/>
                                 <attributedString key="textStorage">
                                     <fragment content=" ">
@@ -265,7 +265,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </scroller>
                     <scroller key="verticalScroller" verticalHuggingPriority="750" horizontal="NO" id="eup-xP-JpO">
-                        <rect key="frame" x="744" y="1" width="15" height="240"/>
+                        <rect key="frame" x="743" y="1" width="16" height="240"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </scroller>
                 </scrollView>
@@ -276,14 +276,6 @@
                         <rect key="frame" x="1" y="1" width="368" height="48"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Yp-I3-uN6">
-                                <rect key="frame" x="93" y="7" width="92" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="push" title="签名APK" bezelStyle="rounded" alignment="center" enabled="NO" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="KZE-mT-2yq">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" size="13" name=".PingFangSC-Regular"/>
-                                </buttonCell>
-                            </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="n6l-CN-UGH">
                                 <rect key="frame" x="14" y="7" width="79" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -312,7 +304,7 @@
                     <color key="fillColor" name="controlHighlightColor" catalog="System" colorSpace="catalog"/>
                 </box>
             </subviews>
-            <point key="canvasLocation" x="-106" y="99"/>
+            <point key="canvasLocation" x="257" y="135"/>
         </view>
     </objects>
 </document>
