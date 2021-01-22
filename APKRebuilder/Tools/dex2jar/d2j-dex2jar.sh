@@ -45,4 +45,4 @@ else
     done
 fi
 
-java -Xms512m -Xmx1024m -classpath "${_classpath}" "com.googlecode.dex2jar.tools.Dex2jarCmd" "$@"
+java -Xms2048m -Xmx8192m -classpath "${_classpath}" "com.googlecode.dex2jar.tools.Dex2jarCmd" "$@"

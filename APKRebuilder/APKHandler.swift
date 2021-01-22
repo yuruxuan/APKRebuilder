@@ -27,12 +27,12 @@ class APKHandler: NSObject, ProcessCallback{
     var handlerCallback: APKHanderCallback?
     
     override init() {
-        apktoolPath = Bundle.main.path(forResource: "apktool_2.4.1", ofType: "jar") ?? "apktool_2.4.1"
+        apktoolPath = Bundle.main.path(forResource: "apktool_2.5.0", ofType: "jar") ?? "apktool_2.5.0"
         apksignerPath = Bundle.main.path(forResource: "apksigner", ofType: "jar") ?? "apksigner"
         keystorePath = Bundle.main.path(forResource: "APKRebuilder", ofType: "keystore") ?? "APKRebuilder"
         jdGUIPath = Bundle.main.path(forResource: "jd-gui-1.6.6", ofType: "jar") ?? "jd-gui-1.6.6"
-        smaliPath = Bundle.main.path(forResource: "smali-2.3.4", ofType: "jar") ?? "smali-2.3.4"
-        baksmaliPath = Bundle.main.path(forResource: "baksmali-2.3.4", ofType: "jar") ?? "baksmali-2.3.4"
+        smaliPath = Bundle.main.path(forResource: "smali-2.4.0", ofType: "jar") ?? "smali-2.4.0"
+        baksmaliPath = Bundle.main.path(forResource: "baksmali-2.4.0", ofType: "jar") ?? "baksmali-2.4.0"
         dex2jarPath = Bundle.main.path(forResource: "dex2jar/d2j-dex2jar", ofType: "sh") ?? "d2j-dex2jar"
         jar2dexPath = Bundle.main.path(forResource: "dex2jar/d2j-jar2dex", ofType: "sh") ?? "d2j-jar2dex"
     }
