@@ -7,15 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E556610225BAEEA500439D55 /* apktool_2.5.0.jar in Resources */ = {isa = PBXBuildFile; fileRef = E556610125BAEEA500439D55 /* apktool_2.5.0.jar */; };
+		E556610425BAEEC300439D55 /* baksmali-2.4.0.jar in Resources */ = {isa = PBXBuildFile; fileRef = E556610325BAEEC300439D55 /* baksmali-2.4.0.jar */; };
+		E556610625BAEEDA00439D55 /* smali-2.4.0.jar in Resources */ = {isa = PBXBuildFile; fileRef = E556610525BAEEDA00439D55 /* smali-2.4.0.jar */; };
 		E5B5161D23E65D8F004D9F33 /* apksigner.jar in Resources */ = {isa = PBXBuildFile; fileRef = E5B5161B23E65D76004D9F33 /* apksigner.jar */; };
 		E5B5161F23E6713F004D9F33 /* APKRebuilder.keystore in Resources */ = {isa = PBXBuildFile; fileRef = E5B5161E23E67133004D9F33 /* APKRebuilder.keystore */; };
 		E5B5162123E67B5F004D9F33 /* jd-gui-1.6.6.jar in Resources */ = {isa = PBXBuildFile; fileRef = E5B5162023E67B53004D9F33 /* jd-gui-1.6.6.jar */; };
-		E5B5170B23E6B5EB004D9F33 /* baksmali-2.3.4.jar in Resources */ = {isa = PBXBuildFile; fileRef = E5B5170723E6B5E1004D9F33 /* baksmali-2.3.4.jar */; };
-		E5B5170C23E6B5EB004D9F33 /* smali-2.3.4.jar in Resources */ = {isa = PBXBuildFile; fileRef = E5B5170823E6B5E1004D9F33 /* smali-2.3.4.jar */; };
 		E5B5170E23E6C18E004D9F33 /* dex2jar in Resources */ = {isa = PBXBuildFile; fileRef = E5B5170D23E6C18E004D9F33 /* dex2jar */; };
 		E5C73E2A23E50B3E00B24A0A /* ProcessCallback.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C73E2923E50B3E00B24A0A /* ProcessCallback.swift */; };
 		E5C73E2C23E50F1200B24A0A /* ProcessShell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C73E2B23E50F1200B24A0A /* ProcessShell.swift */; };
-		E5C73E3523E55D5600B24A0A /* apktool_2.4.1.jar in Resources */ = {isa = PBXBuildFile; fileRef = E5C73E3323E55C5000B24A0A /* apktool_2.4.1.jar */; };
 		E5C73E3723E5698900B24A0A /* APKHanderCallback.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C73E3623E5698900B24A0A /* APKHanderCallback.swift */; };
 		E5CCAD9423E41549007661AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5CCAD9323E41549007661AB /* AppDelegate.swift */; };
 		E5CCAD9623E4154A007661AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5CCAD9523E4154A007661AB /* Assets.xcassets */; };
@@ -26,6 +26,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E556610125BAEEA500439D55 /* apktool_2.5.0.jar */ = {isa = PBXFileReference; lastKnownFileType = archive.jar; name = apktool_2.5.0.jar; path = APKRebuilder/Tools/apktool_2.5.0.jar; sourceTree = "<group>"; };
+		E556610325BAEEC300439D55 /* baksmali-2.4.0.jar */ = {isa = PBXFileReference; lastKnownFileType = archive.jar; name = "baksmali-2.4.0.jar"; path = "APKRebuilder/Tools/baksmali-2.4.0.jar"; sourceTree = "<group>"; };
+		E556610525BAEEDA00439D55 /* smali-2.4.0.jar */ = {isa = PBXFileReference; lastKnownFileType = archive.jar; name = "smali-2.4.0.jar"; path = "APKRebuilder/Tools/smali-2.4.0.jar"; sourceTree = "<group>"; };
 		E5B5161B23E65D76004D9F33 /* apksigner.jar */ = {isa = PBXFileReference; lastKnownFileType = archive.jar; path = apksigner.jar; sourceTree = "<group>"; };
 		E5B5161E23E67133004D9F33 /* APKRebuilder.keystore */ = {isa = PBXFileReference; lastKnownFileType = file; path = APKRebuilder.keystore; sourceTree = "<group>"; };
 		E5B5162023E67B53004D9F33 /* jd-gui-1.6.6.jar */ = {isa = PBXFileReference; lastKnownFileType = archive.jar; path = "jd-gui-1.6.6.jar"; sourceTree = "<group>"; };
@@ -75,6 +78,9 @@
 		E5CCAD8723E41549007661AB = {
 			isa = PBXGroup;
 			children = (
+				E556610525BAEEDA00439D55 /* smali-2.4.0.jar */,
+				E556610325BAEEC300439D55 /* baksmali-2.4.0.jar */,
+				E556610125BAEEA500439D55 /* apktool_2.5.0.jar */,
 				E5CCAD9223E41549007661AB /* APKRebuilder */,
 				E5CCAD9123E41549007661AB /* Products */,
 			);
@@ -170,12 +176,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E5B5170B23E6B5EB004D9F33 /* baksmali-2.3.4.jar in Resources */,
+				E556610625BAEEDA00439D55 /* smali-2.4.0.jar in Resources */,
+				E556610425BAEEC300439D55 /* baksmali-2.4.0.jar in Resources */,
+				E556610225BAEEA500439D55 /* apktool_2.5.0.jar in Resources */,
 				E5B5170E23E6C18E004D9F33 /* dex2jar in Resources */,
-				E5B5170C23E6B5EB004D9F33 /* smali-2.3.4.jar in Resources */,
 				E5B5161F23E6713F004D9F33 /* APKRebuilder.keystore in Resources */,
 				E5B5161D23E65D8F004D9F33 /* apksigner.jar in Resources */,
-				E5C73E3523E55D5600B24A0A /* apktool_2.4.1.jar in Resources */,
 				E5B5162123E67B5F004D9F33 /* jd-gui-1.6.6.jar in Resources */,
 				E5CCAD9623E4154A007661AB /* Assets.xcassets in Resources */,
 				E5CCADA423E4160F007661AB /* MainViewController.xib in Resources */,
