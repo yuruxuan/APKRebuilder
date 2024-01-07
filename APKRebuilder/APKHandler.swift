@@ -27,7 +27,7 @@ class APKHandler: NSObject, ProcessCallback{
     var handlerCallback: APKHanderCallback?
     
     override init() {
-        apktoolPath = Bundle.main.path(forResource: "apktool_2.5.0", ofType: "jar") ?? "apktool_2.5.0"
+        apktoolPath = Bundle.main.path(forResource: "apktool_2.9.1", ofType: "jar") ?? "apktool_2.9.1"
         apksignerPath = Bundle.main.path(forResource: "apksigner", ofType: "jar") ?? "apksigner"
         keystorePath = Bundle.main.path(forResource: "APKRebuilder", ofType: "keystore") ?? "APKRebuilder"
         jdGUIPath = Bundle.main.path(forResource: "jd-gui-1.6.6", ofType: "jar") ?? "jd-gui-1.6.6"
@@ -221,6 +221,7 @@ class APKHandler: NSObject, ProcessCallback{
         shell.runAsync(launchPath: "/usr/bin/java", arguments: args, callback: self)
     }
     
+    // JAVA_TOOL_OPTIONS="-Djdk.util.zip.disableZip64ExtraFieldValidation=true" java -jar apktool_2.9.1.jar d  library.apk
     private func decompileAPK(path: String, output: String) {
         var args = [String]()
         args.append("-jar")
