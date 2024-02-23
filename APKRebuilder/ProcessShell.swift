@@ -10,7 +10,7 @@ import Cocoa
 
 class ProcessShell: NSObject {
     
-    func run(launchPath: String, arguments: [String]?) -> (code:Int, stdout:String, stderr:String) {
+    func run(launchPath: String, arguments: [String]?, environment: [String:String]?) -> (code:Int, stdout:String, stderr:String) {
         let stdoutPipe = Pipe()
         let stdoutFileHandle = stdoutPipe.fileHandleForReading
         let stderrPipe = Pipe()
@@ -19,6 +19,7 @@ class ProcessShell: NSObject {
         let process = Process()
         process.launchPath = launchPath
         process.arguments = arguments ?? []
+        process.environment = environment ?? [:]
         process.standardOutput = stdoutPipe
         process.standardError = stderrPipe
         process.launch()
@@ -32,7 +33,7 @@ class ProcessShell: NSObject {
         return (Int(process.terminationStatus), stdoutStr, stderrStr)
     }
     
-    func runAsync(launchPath: String, arguments: [String]?, callback: ProcessCallback?) {
+    func runAsync(launchPath: String, arguments: [String]?, environment: [String:String]?, callback: ProcessCallback?) {
         let stdoutPipe = Pipe()
         let stdoutFileHandle = stdoutPipe.fileHandleForReading
         let stderrPipe = Pipe()
@@ -41,6 +42,7 @@ class ProcessShell: NSObject {
         let process = Process()
         process.launchPath = launchPath
         process.arguments = arguments ?? []
+        process.environment = environment ?? [:]
         process.standardOutput = stdoutPipe
         process.standardError = stderrPipe
         
@@ -70,7 +72,7 @@ class ProcessShell: NSObject {
         
         stdoutFileHandle.waitForDataInBackgroundAndNotify()
         stderrFileHandle.waitForDataInBackgroundAndNotify()
-
+        
         callback?.processStarted(cmd: cmd)
         process.launch()
     }

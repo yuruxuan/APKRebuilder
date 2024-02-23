@@ -171,6 +171,19 @@ class APKHandler: NSObject, ProcessCallback{
         return true
     }
     
+    func execSignVersion(path: String) -> Bool {
+        if isRunning {
+            return false
+        }
+        
+        let task = APKHandler.Task(name: "SignVersion", arg1: path, arg2: nil)
+        tasks.append(task)
+        dispatchTask()
+        handlerCallback?.taskflowStarted()
+        isRunning = true
+        return true
+    }
+    
     private func dispatchTask() {
         if tasks.count <= 0 {
             return
@@ -199,6 +212,8 @@ class APKHandler: NSObject, ProcessCallback{
             jar2Dex(path: arg1!, output: arg2!)
         case "SignInfo":
             signInfo(path: arg1!)
+        case "SignVersion":
+            signVersion(path: arg1!)
         default:
             break
         }
@@ -210,7 +225,10 @@ class APKHandler: NSObject, ProcessCallback{
         var args = [String]()
         args.append("-jar")
         args.append(jdGUIPath)
-        shell.runAsync(launchPath: "/usr/bin/java", arguments: args, callback: nil)
+        shell.runAsync(launchPath: "/usr/bin/java",
+                       arguments: args,
+                       environment: [:],
+                       callback: nil)
     }
     
     private func removeAPKToolFrameworkRes() {
@@ -218,7 +236,10 @@ class APKHandler: NSObject, ProcessCallback{
         args.append("-jar")
         args.append(apktoolPath)
         args.append("empty-framework-dir")
-        shell.runAsync(launchPath: "/usr/bin/java", arguments: args, callback: self)
+        shell.runAsync(launchPath: "/usr/bin/java",
+                       arguments: args,
+                       environment: ["JAVA_TOOL_OPTIONS":"-Djdk.util.zip.disableZip64ExtraFieldValidation=true"],
+                       callback: self)
     }
     
     // JAVA_TOOL_OPTIONS="-Djdk.util.zip.disableZip64ExtraFieldValidation=true" java -jar apktool_2.9.1.jar d  library.apk
@@ -230,7 +251,10 @@ class APKHandler: NSObject, ProcessCallback{
         args.append(path)
         args.append("-o")
         args.append(output)
-        shell.runAsync(launchPath: "/usr/bin/java", arguments: args, callback: self)
+        shell.runAsync(launchPath: "/usr/bin/java",
+                       arguments: args,
+                       environment: ["JAVA_TOOL_OPTIONS":"-Djdk.util.zip.disableZip64ExtraFieldValidation=true"],
+                       callback: self)
     }
     
     private func rebuidAPK(path: String, output: String) {
@@ -241,7 +265,10 @@ class APKHandler: NSObject, ProcessCallback{
         args.append(path)
         args.append("-o")
         args.append(output)
-        shell.runAsync(launchPath: "/usr/bin/java", arguments: args, callback: self)
+        shell.runAsync(launchPath: "/usr/bin/java",
+                       arguments: args,
+                       environment: ["JAVA_TOOL_OPTIONS":"-Djdk.util.zip.disableZip64ExtraFieldValidation=true"],
+                       callback: self)
     }
     
     private func signAPK(path: String) {
@@ -255,7 +282,10 @@ class APKHandler: NSObject, ProcessCallback{
         args.append("--ks-pass")
         args.append("pass:APKRebuilder")
         args.append(path)
-        shell.runAsync(launchPath: "/usr/bin/java", arguments: args, callback: self)
+        shell.runAsync(launchPath: "/usr/bin/java",
+                       arguments: args,
+                       environment: ["JAVA_TOOL_OPTIONS":"-Djdk.util.zip.disableZip64ExtraFieldValidation=true"],
+                       callback: self)
     }
     
     private func smali2Dex(path: String, output: String) {
@@ -266,7 +296,10 @@ class APKHandler: NSObject, ProcessCallback{
         args.append(path)
         args.append("-o")
         args.append(output)
-        shell.runAsync(launchPath: "/usr/bin/java", arguments: args, callback: self)
+        shell.runAsync(launchPath: "/usr/bin/java",
+                       arguments: args,
+                       environment: ["JAVA_TOOL_OPTIONS":"-Djdk.util.zip.disableZip64ExtraFieldValidation=true"],
+                       callback: self)
     }
     
     private func dex2Smali(path: String, output: String) {
@@ -277,7 +310,10 @@ class APKHandler: NSObject, ProcessCallback{
         args.append(path)
         args.append("-o")
         args.append(output)
-        shell.runAsync(launchPath: "/usr/bin/java", arguments: args, callback: self)
+        shell.runAsync(launchPath: "/usr/bin/java",
+                       arguments: args,
+                       environment: ["JAVA_TOOL_OPTIONS":"-Djdk.util.zip.disableZip64ExtraFieldValidation=true"],
+                       callback: self)
     }
     
     private func dex2Jar(path: String, output: String) {
@@ -286,7 +322,10 @@ class APKHandler: NSObject, ProcessCallback{
         args.append(path)
         args.append("-o")
         args.append(output)
-        shell.runAsync(launchPath: "/bin/bash", arguments: args, callback: self)
+        shell.runAsync(launchPath: "/bin/bash",
+                       arguments: args,
+                       environment: ["JAVA_TOOL_OPTIONS":"-Djdk.util.zip.disableZip64ExtraFieldValidation=true"],
+                       callback: self)
     }
     
     private func jar2Dex(path: String, output: String) {
@@ -295,16 +334,34 @@ class APKHandler: NSObject, ProcessCallback{
         args.append(path)
         args.append("-o")
         args.append(output)
-        shell.runAsync(launchPath: "/bin/bash", arguments: args, callback: self)
+        shell.runAsync(launchPath: "/bin/bash",
+                       arguments: args,
+                       environment: ["JAVA_TOOL_OPTIONS":"-Djdk.util.zip.disableZip64ExtraFieldValidation=true"],
+                       callback: self)
     }
     
     private func signInfo(path: String) {
         var args = [String]()
-        args.append("-list")
         args.append("-printcert")
         args.append("-jarfile")
         args.append(path)
-        shell.runAsync(launchPath: "/usr/bin/keytool", arguments: args, callback: self)
+        shell.runAsync(launchPath: "/usr/bin/keytool",
+                       arguments: args,
+                       environment: ["JAVA_TOOL_OPTIONS":"-Djdk.util.zip.disableZip64ExtraFieldValidation=true"],
+                       callback: self)
+    }
+    
+    private func signVersion(path: String) {
+        var args = [String]()
+        args.append("-jar")
+        args.append(apksignerPath)
+        args.append("verify")
+        args.append("-v")
+        args.append(path)
+        shell.runAsync(launchPath: "/usr/bin/java",
+                       arguments: args,
+                       environment: ["JAVA_TOOL_OPTIONS":"-Djdk.util.zip.disableZip64ExtraFieldValidation=true"],
+                       callback: self)
     }
     
     private func apktoolVersion() {
@@ -312,7 +369,10 @@ class APKHandler: NSObject, ProcessCallback{
         args.append("-jar")
         args.append(apktoolPath)
         args.append("-version")
-        shell.runAsync(launchPath: "/usr/bin/java", arguments: args, callback: self)
+        shell.runAsync(launchPath: "/usr/bin/java",
+                       arguments: args,
+                       environment: ["JAVA_TOOL_OPTIONS":"-Djdk.util.zip.disableZip64ExtraFieldValidation=true"],
+                       callback: self)
     }
     
     /************* ProcessCallback *************/

@@ -83,6 +83,8 @@ class MainViewController: NSViewController, APKHanderCallback {
             _ = apkHandler.execDex2Jar(path: path)
         case 6:
             _ = apkHandler.execSignInfo(path: path)
+        case 7:
+            _ = apkHandler.execSignVersion(path: path)
         default:
             break
         }
